@@ -37,3 +37,18 @@ unido = lista.join(" - ");
 
 actualizando = lista.slice(2,5);//no incluye el 5
 actualizando = lista.slice(2,-1);//Hasta el final
+
+//Filter y forEach para iterar un array
+
+let cadena = ["Naa", "nada", "mmsiii", "nooo"];
+
+cadena.forEach(function (numero){
+    document.write(`${numero} <br>`)
+})
+
+cadena.filter((numero)=>{
+    document.write(`${numero} <br>`)
+})
+
+let resultado = cadena.filter(numero => numero.length == 4)
+document.write(resultado)
