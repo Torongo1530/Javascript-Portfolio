@@ -1,0 +1,25 @@
+--------Crear Database---------
+CREATE DATABASE "fulano";
+	
+--------Crear Tabla y atributos-------
+CREATE TABLE Clientes(
+Email VARCHAR(50) NOT NULL PRIMARY KEY,
+Cedula_Cliente INT NOT NULL UNIQUE,
+Nombre VARCHAR(25) NOT NULL,
+Apellido VARCHAR(25) NOT NULL,
+Sexo CHAR(1) NOT NULL,
+Tipo_Membresia VARCHAR(25) NOT NULL,
+Fecha_Nacimiento DATE NOT NULL,
+Fecha_Inicio_Membresia DATE NOT NULL,
+ID_Membresia INT NOT NULL,
+Cedula_Entrenador INT NOT NULL UNIQUE,
+);
+
+------Insertar datos-----------
+Insert into Clientes (Email, cedula, nombre, apellido)
+values ('email@gmail.com', 29502735, 'Deiby', 'Lora'), ('email2@gmail.com', 235672, 'Engel', 'Lora')
+
+---Seleccionar datos----
+select * from Cliente;
+
+

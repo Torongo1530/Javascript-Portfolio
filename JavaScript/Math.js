@@ -41,3 +41,9 @@ let numero9 = Math.trunc(9.3);
 //pi
 let numero0 = Math.PI;
 
+//E "Constante de euler"
+let numero10 = Math.E;
+
+// LN2 "Logaritmo natural de 2" LN10 "Logaritmo natural de 10"
+// LOG2E "Logaritmo de E con base 2"
+// LOG10E "Logaritmo de de E con base 10"
