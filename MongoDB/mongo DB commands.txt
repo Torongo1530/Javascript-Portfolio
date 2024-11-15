@@ -1,0 +1,43 @@
+show dbs-----------------------------muestra todas las base de datos
+use tienda----------------------------entra a la base de datos tienda y si no existe la crea
+db------------------------------------muestra el nombre de la base de datos actual
+db.createCollection("Cliente")--------crea una coleccion (entidad)
+show collections-----------------------Muestra todas las colecciones
+
+db.Cliente.insertOne({
+"Nombre":"Angel",
+"Apellido":"Diaz",
+"Edad":24,
+"Direccion":{"Calle":"Pedro Livio Cedenio","Numero":18,"sector":"Los guaricanos"}
+})--------------Inserta un documento a la coleccion Cliente
+
+db.Cliente.insertMany([{
+"Nombre":"Angel",
+"Apellido":"Diaz",
+"Edad":24,
+"Direccion":{"Calle":"Pedro Livio Cedenio","Numero":18,"sector":"Los guaricanos"}
+},
+{
+"Nombre":"Isaac",
+"Apellido":"Lora",
+"Edad":1,
+"Direccion":{"Calle":"Pedro Livio Cedenio","Numero":18,"sector":"Los guaricanos"}
+}]
+)-----------------Inserta mas de un documento a la coleccion empleado (debe ser un arreglo entre corchetes)
+
+db.cliente.find()---------------muestra todos los datos ingresados a la base de datos
+
+db.empleado.find({Nombre: Isaac})---------filtra los registros por una llave en especifico y muestra ese registro
+
+db.empleado.updateOne({Edad:24}, {$set:{Edad:27}}) ------------actualiza solo el primer documento que cumpla con edad:24
+
+db.empleado.updateMany({Edad:24}, {$set:{Edad:27}}) ----------- Actualiza todos los documentos que cumplan con los parametros edad:24
+
+db.empleado.find().limit(1)----------------------------Limita la cantidad de resultados con los parametros indicados.
+
+db.empleado.deleteOne({Nombre: "Angel"})-----------------Elimina el primer documento con el nombre Angel.
+
+db.empleado.deleteMany({Nombre: "Angel"})-----------------Elimina todos los documentos con el nombre Angel
+
+
+
